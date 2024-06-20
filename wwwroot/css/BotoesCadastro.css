@@ -1,0 +1,237 @@
+﻿/* ------ AGENDAMENTO VERSÃO 2 ------- */
+
+.main-agendamento {
+    display: grid;
+    margin-top: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 60px 60px 60px 60px;
+}
+
+.titulo-age {
+    grid-area: titulo-age;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+    .titulo-age h1 {
+        font-size: 40px;
+    }
+
+.cont-age {
+    grid-area: cont-age;
+    display: flex;
+    flex-direction: column;
+}
+
+    .cont-age a {
+        margin-left: 50%;
+        margin-top: 50px;
+    }
+
+    .cont-age h2 {
+        margin-left: 40%;
+        margin-bottom: 20px;
+    }
+
+
+.cont-col {
+    grid-area: cont-col;
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+}
+
+.img-col {
+    margin-top: 200px;
+}
+
+.cont-col a {
+    margin-left: 43%;
+    margin-top: 50px;
+}
+
+.cont-col h2 {
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+
+.gta-age {
+    grid-template-areas:
+        "titulo-age titulo-age titulo-age"
+        "cont-age cont-age img-age"
+        "img-col cont-col cont-col";
+    gap: 20px;
+}
+
+.main-agendamento .btn {
+    padding: 20px 20px 20px 20px;
+    background: #50e18a;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media(max-width: 1054px) {
+    .main-agendamento .btn {
+        padding: 10px;
+        background: #50e18a;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: -40%;
+    }
+
+    .img-age {
+        width: 300px;
+    }
+
+    .img-col {
+        width: 300px;
+    }
+
+    .cont-age p {
+        margin-left: 5%;
+    }
+
+    .cont-age h2 {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .cont-col h2 {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .cont-col {
+        margin-top: 100px;
+    }
+
+    .img-col {
+        margin-top: 100px;
+    }
+
+    .cont-col a {
+        margin-left: 55%;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 646px) {
+    .gta-age {
+        grid-template-areas:
+            "titulo-age"
+            "img-age"
+            "cont-age"
+            "img-col"
+            "cont-col";
+        gap: 20px;
+    }
+
+    .titulo-age h1 {
+        font-size: 25px;
+    }
+
+    .img-col {
+        margin-top: 150px;
+        margin-left: 15%;
+    }
+
+    .img-age {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 15%;
+    }
+
+    .main-agendamento .btn {
+        padding: 10px;
+        background: #50e18a;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: -40%;
+    }
+}
+
+@media(max-width: 497px) {
+    .gta-age {
+        grid-template-areas:
+            "titulo-age"
+            "img-age"
+            "cont-age"
+            "img-col"
+            "cont-col";
+        gap: 20px;
+    }
+
+    .cont-age .btn {
+        padding: 10px;
+        background: #50e18a;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: -60%;
+    }
+
+    .cont-col .btn {
+        padding: 10px;
+        background: #50e18a;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: -40%;
+    }
+
+    .img-col {
+        margin-top: 150px;
+        margin-left: 10px;
+        width: 250px;
+    }
+
+    .img-age {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 10%;
+        width: 250px;
+    }
+
+    .cont-col {
+        margin-top: 50px;
+    }
+
+        .cont-col a {
+            margin-left: 46%;
+            margin-top: 50px;
+        }
+
+    .cont-age a {
+        margin-left: 46%;
+        margin-top: 50px;
+    }
+}

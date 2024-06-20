@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Pontos de Descarte";
+}
+
+
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="stylemapa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/PontosDescarte.css" asp-append-version="true" />
+</head>
+<main class="main-map gta-1">
+    <!-- 1 Section Filters -->
+    <div class="main-filters">
+
+        <h1 class="section1h1">Pontos de Descarte</h1>
+
+        <p>
+            <h3>Pesquise</h3>
+        </p>
+        <!-- 1.1 Search Bar -->
+        <div class="search-map">
+            <input type="text" name="search-bar" class="search-bar" placeholder="Pesquisar...">
+            <a href="#botaopesquisar">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+        <!-- 1.1 End Search Bar -->
+
+        <div class="formulary">
+            <form action="#" method="post">
+
+
+                <div class="input-box">
+                    <div class="filtermaterial">
+                        <label for="material">Material:</label>
+                        <select id="material" name="material">
+                            <option value="AC">Plástico</option>
+                            <option value="AL">Metal</option>
+                            <option value="AP">Papelão</option>
+                        </select>
+                    </div>
+
+                    <div class="filterestado">
+                        <label for="estados">Estado:</label>
+                        <select id="estados" name="estados">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="filterlocal">
+                        <label for="local">Local:</label>
+                        <select id="local" name="local">
+                            <option value="PV">Privado</option>
+                            <option value="PF">Prefeitura</option>
+                            <option value="CO">Cooperativa</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="formulary-btns">
+                    <div class="submit-btn">
+                        <input type="submit" name="btnenvio" value="Filtrar" class="action_btn_form">
+                    </div>
+
+                    <div class="reset-btn">
+                        <input type="reset" name="btnreset" value="Limpar" class="action_btn_form_reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 1 End Section Filters -->
+    <!-- 2 Section Map -->
+
+    <div class="embedded-map">
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Az_VTg5f2syKsvtHMrBKtipwXiRYVUk&ehbc=2E312F&noprof=1" class="map"></iframe>
+        </div>
+    </div>
+
+    <!-- 2 End Section Map -->
+
+</main>

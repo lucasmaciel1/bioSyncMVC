@@ -1,0 +1,251 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/bioSyncMVC.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="body-home">
+    <header class="header-home">
+        <div class="navbar">
+            <div class="logo-mapa">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/logo-bio-sync-login.png" alt="" width="100px">
+                </a>
+            </div>
+            <ul class="links">
+
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="PontosDescarte" asp-action="Index">Pontos de Descarte</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="" asp-action="">Agendamento</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="BotoesCadastro" asp-action="Index">Cadastre-se</a>
+                </li>
+            </ul>
+
+            <a asp-controller="Login" asp-action="Login" class="action_btn">Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdownmenu">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="PontosDescarte" asp-action="Index">Pontos de Descarte</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="" asp-action="">Agendamento</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="BotoesCadastro" asp-action="Index">Cadastre-se</a>
+            </li>
+
+            <a asp-controller="Login" asp-action="Login" class="action_btn">Login</a>
+        </div>
+
+        <div class="qs">
+            <h1 class="title-qs">Quem Somos?</h1>
+            <p>
+                O objetivo da <strong>BIO</strong>SYNC é estabelecer um ambiente virtual que possibilite a conexão e conscientização de pessoas em prol de tornar o futuro mais limpo e sustentável, gerando emprego, visibilidade e oportunidade para pequenos coletores, além disso, disponibilizar informações de maneira prática para os cidadãos.
+            </p>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdownmenu')
+
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+
+    <main class="main-home">
+        
+        
+        <div class="container-btn">
+            <a asp-controller="" asp-action="">
+                <div class="btn1">
+                    <img src="~/img/cerebro.png" alt="consc" width="100px">
+                    <p class="title-consc">Conscientização</p>
+                </div>
+            </a>
+
+            <a asp-controller="PontosDescarte" asp-action="Index"> <!--Aqui deve redirecionar para Pontos de Descarte-->
+                <div class="btn2">
+                    <img src="~/img/loc.png" alt="pontdesc" width="100px">
+                    <p class="title-consc">Pontos de Descarte</p>
+                </div>
+            </a>
+
+            <a asp-controller="" asp-action=""> <!--Aqui deve redirecionar para agendamentos-->
+                <div class="btn3">
+                    <img src="~/img/calendario.png" alt="agend" width="100px">
+                    <p class="title-consc">Agendamento</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="frases">
+            <hr class="hr1">
+            <p class="textofrase">
+                "A sustentabilidade cria e mantém as condições sob as quais os humanos e a natureza podem existir em equilíbrio, que permite a prosperidade a longo prazo."
+            </p>
+            <p class="autorfrase">
+                Dr. Karl-Henrik Robèrt
+            </p>
+            <p></p>
+            <hr class="hr2">
+        </div>
+
+        <div class="tituloredes">
+            <p>Redes Sociais</p>
+        </div>
+
+        <div class="redes">
+            <div class="insta">
+                <a href="#"> <!--Link rede social-->
+                    <img src="~/img/insta-preto.png" alt="insta">
+                </a>
+            </div>
+
+            <div class="tiktok">
+                <a href="#">
+                    <img src="~/img/tiktok--preto.png" alt="tiktok">
+                </a>
+            </div>
+
+            <div class="yt">
+                <a href="#">
+                    <img src="~/img/youtube_black.png" alt="yt">
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+   <footer class="rodhome">
+        <h1 class="ideali">Idealizadores</h1>
+
+        <div class="profiles">
+            <div class="ailton">
+                <a href="#">
+                    <img src="~/img/Intersect.png" alt="foto-ailton" id="foto-ailton">
+                </a>
+            </div>
+
+            <div class="erasmo">
+                <a href="#">
+                    <img src="~/img/Intersect.png" alt="foto-erasmo" id="foto-erasmo">
+                </a>
+            </div>
+
+            <div class="higor">
+                <a href="#">
+                    <img src="~/img/Intersect.png" alt="foto-higor" id="foto-higor">
+                </a>
+            </div>
+
+            <div class="jose">
+                <a href="#">
+                    <img src="~/img/Intersect.png" alt="foto-jose" id="foto-jose">
+                </a>
+            </div>
+
+            <div class="lucas">
+                <a href="#">
+                    <img src="~/img/Intersect.png" alt="foto-lucas" id="foto-lucas">
+                </a>
+            </div>
+        </div>
+
+        <p class="nomefooter"><strong>BIO</strong>SYNC</p>
+    </footer>
+
+
+</body>
+</html>
+
+
+@* <body> 
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/logo-bio-sync-login.png" width="100px" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Index">Usuario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="text-center">
+                <h1 class="display-4">Welcome</h1>
+                <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - bioSyncMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--arroba_await RenderSectionAsync("Scripts", required: false)-->
+</body>
+</html>*@

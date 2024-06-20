@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Botoes de cadastro";
+}
+
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/BotoesCadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<main class="body-btn">
+
+
+    <section class="main-agendamento gta-age">
+        <div class="titulo-age">
+            <h1>Cadastros</h1>
+        </div>
+        <div class="cont-age">
+            <h2>Objetivo Do Cadastro De Pessoa/catador</h2>
+
+            <p>
+                A reciclagem é uma das alternativas mais eficientes para tratar os resíduos sólidos, tanto do ponto de vista ambiental quanto social. Seu grande objetivo é reintroduzi-los na cadeia produtiva a fim de que ainda gerem valor e sejam reutilizados, reduzindo-se a produção de lixo, aumentando a preservação dos recursos naturais e melhorando a qualidade de vida das pessoas . Portanto, você que doa lixo reciclável pode ter como objetivo contribuir para a preservação do meio ambiente e a melhoria da qualidade de vida das pessoa.
+            </p>
+            <p>
+                O objetivo do cadastro de pessoa/catador é disponibilizar as ferramentas da BIO SYNC e criar um vínculo entre você e o meio ambiente. Para quem é catador ou autônomo terá a possibilidade de ter mais visibilidade e conectar-se mais facilmente com pessoas e residências que realizam o descarte.
+            </p>
+            <a asp-area="" asp-controller="Usuario" asp-action="Create">
+                <button type="button" class="btn">Cadastrar Como Pessoa/Catador</button>
+            </a>
+
+
+        </div>
+
+        <img src="~/img/undraw_throw_away_trash_x60k.svg" alt="img-age-alt" class="img-age" width="500px">
+
+        <img src="~/img/undraw_collecting_re_lp6p.svg" alt="img-age-alt" class="img-col" width="500px">
+
+        <div class="cont-col">
+
+            <h2>Objetivo Do Cadastro Do Ponto De Descarte</h2>
+
+            <p>O objetivo do cadastro de pontos de descarte de lixo reciclável é promover a gestão adequada dos resíduos, evitando a contaminação do solo e da água, o desperdício dos recursos naturais não-renováveis, promovendo a reciclagem e melhorando a economia.</p>
+            <p>Clicando no botão abaixo você irá para uma tela de cadastro de um endereço de seu ponto de descarte onde outros usuários teram acesso a ele dando mais visibilidade e praticidade com os descartes.</p>
+
+            <a href="cadastrocatadorv2.html">
+                <button type="button" class="btn">Cadastrar Ponto De Descarte </button>
+            </a>
+        </div>
+
+    </section>
+</main>
